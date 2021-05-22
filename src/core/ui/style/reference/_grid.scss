@@ -1,0 +1,18 @@
+@import "./media-queries";
+
+@mixin grid($lg: 1fr 1fr, $md: 1fr, $sm: 1fr, $gap: 30px) {
+  @include for-large-devices {
+    grid-template-columns: $lg;
+  }
+
+  @include for-medium-devices {
+    grid-template-columns: $md;
+  }
+
+  @include for-small-devices {
+    grid-template-columns: $sm;
+  }
+
+  display: grid;
+  grid-gap: $gap;
+}
