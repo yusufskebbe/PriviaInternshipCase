@@ -43,6 +43,25 @@
   letter-spacing: 0.5px;
 }
 
+.typography--h3 {
+  @include for-medium-devices {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.4px;
+  }
+
+  @include for-small-devices {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.5px;
+  }
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+}
+
 .typography--body {
   @include for-medium-devices {
     font-size: 16px;
