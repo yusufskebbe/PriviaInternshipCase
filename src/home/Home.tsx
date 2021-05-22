@@ -7,7 +7,7 @@ interface HomeProps {
 }
 
 function Home(props: HomeProps) {
-  return <h1>{props.name}</h1>;
+  return <h1 className="typography--subtitle">{props.name}</h1>;
 }
 
 export default Home;
