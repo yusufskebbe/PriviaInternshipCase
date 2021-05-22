@@ -1,0 +1,16 @@
+@import "../../core/ui/style/reference/media-queries";
+
+.line {
+  @include for-small-devices {
+    width: 15px;
+  }
+
+  @include for-medium-devices {
+    width: 35px;
+  }
+
+  width: 65px;
+  height: 2px;
+
+  background-color: var(--light-gray);
+}

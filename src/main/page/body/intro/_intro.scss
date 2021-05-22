@@ -42,6 +42,14 @@
   }
 
   &__dashboard {
+    @include for-medium-devices {
+      padding: 0 84px;
+    }
+
+    @include for-small-devices {
+      padding: 0;
+    }
+
     width: 100%;
 
     margin-top: 104px;

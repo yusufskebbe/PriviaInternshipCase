@@ -1,0 +1,94 @@
+@import "../../../../core/ui/style/reference/media-queries";
+
+.features {
+  @include for-small-devices {
+    border-radius: initial;
+  }
+  @include for-medium-devices {
+    padding-bottom: 80px;
+  }
+
+  padding-bottom: 243px;
+
+  background-color: white;
+
+  border-radius: var(--large-border-radius) var(--large-border-radius) 0 0;
+
+  &__icon {
+    @include for-small-devices {
+      width: 95px;
+    }
+
+    width: 160px;
+    height: 95px;
+  }
+
+  &__content {
+    @include for-medium-devices {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 890px;
+
+    margin: 0 auto;
+    padding-top: 170px;
+  }
+
+  &__subtext {
+    @include for-small-devices {
+      margin: 0 auto;
+    }
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+
+    padding-bottom: 23px;
+  }
+
+  &__subtitle {
+    @include for-small-devices {
+      margin-left: 12px;
+    }
+
+    margin-left: 32px;
+
+    color: var(--light-gray);
+  }
+
+  &__title {
+    @include for-small-devices {
+      flex-direction: column;
+
+      text-align: center;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 38px;
+
+    &__description {
+      max-width: 384px;
+
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    @include for-small-devices {
+      grid-template-columns: auto;
+    }
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 72px;
+
+    margin-top: 69px;
+  }
+}
