@@ -1,11 +1,18 @@
 /* stylelint-disable color-no-hex */
 
 :root {
-  --background-color: blanchedalmond;
+  --background-color: white;
 
-  --main-color: white;
+  --main-color: black;
 
-  --text-color: black;
+  --text-color: var(--main-color);
+
+  --dark-blue: #1e5579;
+  --light-blue: #d1e8ff;
+  --primary-blue: #49a4ff;
+
+  --primary-yellow: #edb300;
+  --light-yellow: #ffedb6;
 }
 
 /* stylelint-enable color-no-hex */
