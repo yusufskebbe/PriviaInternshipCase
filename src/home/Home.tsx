@@ -2,12 +2,16 @@ import "./_home.scss";
 
 import React from "react";
 
-interface HomeProps {
-  name: string;
-}
+import Header from "../main/page/header/Header";
+import Body from "../main/page/body/Body";
 
-function Home(props: HomeProps) {
-  return <h1 className="typography--subtitle">{props.name}</h1>;
+function Home() {
+  return (
+    <div className="home">
+      <Header />
+      <Body />
+    </div>
+  );
 }
 
 export default Home;
