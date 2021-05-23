@@ -1,0 +1,41 @@
+@import "../../../../../core/ui/style/reference/media-queries";
+
+.feature-card {
+  @include for-small-devices {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  display: flex;
+  gap: 32px;
+
+  &__content {
+    @include for-small-devices {
+      text-align: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 7px;
+    }
+
+    &__description {
+      margin-bottom: 16px;
+
+      color: var(--dark-gray);
+    }
+
+    &__redirection {
+      margin-right: 7px;
+    }
+
+    &__link {
+      color: var(--dark-blue);
+    }
+  }
+}

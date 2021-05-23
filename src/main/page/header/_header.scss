@@ -1,0 +1,70 @@
+@import "../../../core/ui/style/reference/media-queries";
+
+.header {
+  @include for-medium-devices {
+    justify-content: space-between;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 20px;
+
+  background-color: var(--light-blue);
+
+  &__nav {
+    @include for-medium-devices {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      list-style-type: none;
+    }
+
+    &__list-item {
+      margin-right: 48px;
+    }
+  }
+
+  &__auth {
+    @include for-small-devices {
+      display: none;
+    }
+
+    display: flex;
+    align-items: center;
+  }
+  /* stylelint-disable */
+  &__auth-start {
+    width: 125px !important;
+    height: 38px !important;
+
+    margin-left: 32px;
+    padding: 10px 12px !important;
+
+    color: black !important;
+
+    background-color: white !important;
+
+    font-weight: 400 !important;
+
+    border-radius: var(--micro-border-radius) !important;
+  }
+
+  /* stylelint-enable */
+
+  &__menu {
+    @include for-small-devices {
+      display: block;
+    }
+
+    display: none;
+  }
+}

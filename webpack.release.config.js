@@ -24,7 +24,7 @@ module.exports = function (env = { target: "release" }) {
         module: {
             rules: [
                 {
-                    test: /.(woff(2)?|eot|ttf|svg)(\?[a-z0-9=.#]+)?$/,
+                    test: /.(woff(2)?|eot|ttf|otf|svg)(\?[a-z0-9=.#]+)?$/,
                     use: {
                         loader: "url-loader",
                         options: {

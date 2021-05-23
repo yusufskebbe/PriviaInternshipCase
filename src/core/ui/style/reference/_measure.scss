@@ -1,6 +1,9 @@
 :root {
-  --app-content-width: 1024px;
+  --app-content-width: 1440px;
 
   /* border-radius */
-  --default-border-radius: 0;
+  --default-border-radius: 12px;
+  --small-border-radius: 8px;
+  --micro-border-radius: 4px;
+  --large-border-radius: 48px;
 }

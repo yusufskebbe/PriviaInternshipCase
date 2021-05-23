@@ -1,0 +1,64 @@
+@import "../../../../core/ui/style/reference/media-queries";
+
+.price {
+  width: 100%;
+
+  padding-bottom: 80px;
+
+  background-color: white;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 200px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &__title {
+      max-width: 676px;
+
+      margin-bottom: 16px;
+
+      text-align: center;
+    }
+
+    &__switch {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      margin-top: 36px;
+
+      &__discount {
+        color: var(--dark-blue);
+
+        font-weight: 800;
+      }
+    }
+
+    &__card {
+      @include for-small-devices {
+        display: none;
+      }
+
+      display: flex;
+      gap: 32px;
+
+      margin-top: 47px;
+    }
+
+    &__tab {
+      @include for-small-devices {
+        display: flex;
+        justify-content: center;
+      }
+
+      display: none;
+
+      margin-top: 80px;
+    }
+  }
+}

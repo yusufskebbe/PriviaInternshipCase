@@ -2,12 +2,18 @@ import "./_home.scss";
 
 import React from "react";
 
-interface HomeProps {
-  name: string;
-}
+import Header from "../main/page/header/Header";
+import Body from "../main/page/body/Body";
+import Footer from "../main/page/footer/Footer";
 
-function Home(props: HomeProps) {
-  return <h1>{props.name}</h1>;
+function Home() {
+  return (
+    <div className="home">
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;

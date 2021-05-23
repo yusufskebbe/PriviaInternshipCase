@@ -1,0 +1,63 @@
+.switch {
+  --switch-controller-bg: var(--light-gray);
+  --switch-active-slider-bg: var(--dark-blue);
+
+  position: relative;
+
+  display: inline-block;
+
+  width: 66px;
+  height: 36px;
+}
+
+.switch__controller {
+  width: 0;
+  height: 0;
+
+  opacity: 0;
+
+  &:checked + .switch__slider {
+    background-color: var(--switch-controller-bg);
+  }
+
+  &:focus + .switch__slider {
+    box-shadow: 0 0 1px var(--switch-controller-bg);
+  }
+
+  &:checked + .switch__slider:before {
+    transform: translateX(26px);
+  }
+}
+
+.switch__slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border: 1px solid var(--light-gray);
+
+  border-radius: 34px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+
+  &:before {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+
+    width: 26px;
+    height: 26px;
+
+    background-color: var(--switch-active-slider-bg);
+
+    border-radius: 50%;
+
+    content: "";
+
+    transition: 0.4s;
+  }
+}

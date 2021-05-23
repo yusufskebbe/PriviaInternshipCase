@@ -7,7 +7,7 @@ import Home from "../../home/Home";
 function getPublicRouteComponents() {
   return [
     <Route key={`route:=${ROUTE_NAMES.ROOT}`} exact={true} path={ROUTE_NAMES.ROOT}>
-      <Home name={"Project Homepage"} />
+      <Home />
     </Route>
   ];
 }

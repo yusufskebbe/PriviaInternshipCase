@@ -1,6 +1,132 @@
 @import "../reference/media-queries";
 
 :root {
-  --font-family: "Archivo", sans-serif;
+  --font-family: "Aileron", sans-serif;
   --font-size: 16px;
+}
+
+.typography--h1 {
+  @include for-medium-devices {
+    font-size: 46px;
+    line-height: 58px;
+    letter-spacing: 0.8px;
+  }
+
+  @include for-small-devices {
+    font-size: 34px;
+    line-height: 46px;
+    letter-spacing: 0.6px;
+  }
+
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: 1px;
+}
+
+.typography--h4 {
+  @include for-medium-devices {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+  }
+
+  @include for-small-devices {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+  }
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.5px;
+}
+
+.typography--h3 {
+  @include for-medium-devices {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.4px;
+  }
+
+  @include for-small-devices {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.5px;
+  }
+
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0.8px;
+}
+
+.typography--body {
+  @include for-medium-devices {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @include for-small-devices {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0;
+  }
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.typography--subtitle {
+  @include for-medium-devices {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.4px;
+  }
+
+  @include for-small-devices {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+  }
+
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+}
+
+.typography--small {
+  @include for-medium-devices {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  @include for-small-devices {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+  }
+
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 17px;
+  letter-spacing: 0.2px;
+}
+
+.typography--button {
+  @include for-small-devices {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.2px;
 }
