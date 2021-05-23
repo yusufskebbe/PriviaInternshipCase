@@ -1,4 +1,4 @@
-import {ReactComponent as PieIcon} from "../../../../core/ui/assets/icons/pie.svg";
+import PieIcon from "../../../../core/ui/assets/icons/pie.png";
 
 import "./_features.scss";
 
@@ -9,25 +9,25 @@ import FeatureCard, {Card} from "./card/FeatureCard";
 
 const featureCardItems: Card[] = [
   {
-    icon: <PieIcon className={"features__icon"} />,
+    icon: PieIcon,
     description: "Create reports with an easy to use drag-and-drop designer.",
     title: "Analyze your data",
     to: "#"
   },
   {
-    icon: <PieIcon className={"features__icon"} />,
+    icon: PieIcon,
     description: "Create reports with an easy to use drag-and-drop designer.",
     title: "Analyze your data",
     to: "#"
   },
   {
-    icon: <PieIcon className={"features__icon"} />,
+    icon: PieIcon,
     description: "Create reports with an easy to use drag-and-drop designer.",
     title: "Analyze your data",
     to: "#"
   },
   {
-    icon: <PieIcon className={"features__icon"} />,
+    icon: PieIcon,
     description: "Create reports with an easy to use drag-and-drop designer.",
     title: "Analyze your data",
     to: "#"
@@ -54,9 +54,12 @@ function Features() {
             }
           </p>
         </div>
+
         <div className={"features__list"}>
-          {featureCardItems.map((feature) => {
-            return <FeatureCard key={feature.title} card={feature} />;
+          {featureCardItems.map((feature, index) => {
+            return (
+              <FeatureCard key={`feature.${index}`} card={feature} type={"standart"} />
+            );
           })}
         </div>
       </div>

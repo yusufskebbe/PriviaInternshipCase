@@ -9,25 +9,46 @@ import React from "react";
 
 interface FooterLinkItem {
   title: string;
-  links: string[];
+  links: {id: number; link: string}[];
 }
 
 const footerLinkItems: FooterLinkItem[] = [
   {
     title: "Product",
-    links: ["Landingpage", "Features", "Documentation", "Refferral Program", "Pricing"]
+    links: [
+      {id: 1, link: "Landingpage"},
+      {id: 2, link: "Features"},
+      {id: 3, link: "Documentation"},
+      {id: 4, link: "Refferral Program"},
+      {id: 5, link: "Pricing"}
+    ]
   },
   {
     title: "Services",
-    links: ["Documentation", "Design", "Themes", "Illustrations", "UI Kit"]
+    links: [
+      {id: 6, link: "Documentation"},
+      {id: 7, link: "Design"},
+      {id: 8, link: "Themes"},
+      {id: 9, link: "Illustrations"},
+      {id: 10, link: "UI Kit"}
+    ]
   },
   {
     title: "Company",
-    links: ["About", "Terms", "Privacy Policy", "Careers"]
+    links: [
+      {id: 11, link: "About"},
+      {id: 12, link: "Terms"},
+      {id: 13, link: "Privacy Policy"},
+      {id: 14, link: "Careers"}
+    ]
   },
   {
     title: "More",
-    links: ["Documentation", "License", "Changelog"]
+    links: [
+      {id: 15, link: "Documentation"},
+      {id: 16, link: "License"},
+      {id: 17, link: "Changelog"}
+    ]
   }
 ];
 
@@ -50,7 +71,7 @@ function Footer() {
       <div className={"footer__links"}>
         {footerLinkItems.map((footerLinkItem) => {
           return (
-            <div className={"footer__link-item"}>
+            <div key={footerLinkItem.title} className={"footer__link-item"}>
               <h4 className={"footer__link-item__title typography--small"}>
                 {footerLinkItem.title}
               </h4>
@@ -58,10 +79,10 @@ function Footer() {
               {footerLinkItem.links.map((link) => {
                 return (
                   <a
-                    key={link}
+                    key={link.id}
                     href={"link"}
                     className={"footer__link-item__link typography--small"}>
-                    {link}
+                    {link.link}
                   </a>
                 );
               })}

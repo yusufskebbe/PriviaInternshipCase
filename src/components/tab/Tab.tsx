@@ -23,6 +23,7 @@ function Tab({items, initialActiveTabIndex = 0, children}: TabProps) {
         {items.map((item, index) => {
           return (
             <TabHeaderItem
+              key={item.id}
               tab={item}
               index={index}
               isActive={activeTabIndex === index}
