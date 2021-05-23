@@ -1,0 +1,104 @@
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 358px;
+  height: 479px;
+
+  padding: 24px;
+
+  border-radius: var(--default-border-radius);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    padding: 14px 0;
+  }
+
+  &__description {
+    padding-bottom: 24px;
+
+    color: var(--dark-gray);
+
+    border-bottom: solid 1px var(--light-gray);
+  }
+
+  &--standart {
+    background-color: var(--light-yellow);
+
+    .price-card {
+      &__header {
+        &__price {
+          color: var(--primary-yellow);
+        }
+
+        &__plan {
+          color: var(--dark-gray);
+        }
+      }
+    }
+  }
+
+  &--essentials {
+    background-color: var(--light-blue);
+
+    .price-card {
+      &__header {
+        &__price {
+          color: var(--primary-blue);
+        }
+
+        &__plan {
+          color: var(--dark-gray);
+        }
+      }
+    }
+  }
+
+  &--premium {
+    background-color: var(--dark-blue);
+
+    .price-card {
+      &__header {
+        &__price {
+          color: white;
+        }
+
+        &__plan {
+          color: white;
+        }
+      }
+
+      &__description {
+        color: white;
+      }
+
+      &__property-item {
+        color: white;
+      }
+    }
+  }
+
+  &__property-item {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 12px;
+
+    color: var(--dark-gray);
+  }
+}

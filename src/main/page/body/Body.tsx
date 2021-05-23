@@ -5,6 +5,7 @@ import React from "react";
 import Intro from "./intro/Intro";
 import Features from "./features/Features";
 import Analytics from "./analytics/Analytics";
+import Price from "./price/Price";
 
 function Body() {
   return (
@@ -12,6 +13,8 @@ function Body() {
       <Intro />
       <Features />
       <Analytics />
+
+      <Price />
     </div>
   );
 }
