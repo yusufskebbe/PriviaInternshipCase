@@ -3,22 +3,28 @@ import {ReactComponent as Chevron} from "../../../../../core/ui/assets/icons/che
 import "./_feature-card.scss";
 
 import React from "react";
+import classNames from "classnames";
 
 export type Card = {
-  icon: JSX.Element;
+  icon: string;
   title: string;
   description: string;
-  to: string;
+  to?: string;
 };
 
 interface FeatureCardProps {
   card: Card;
+  type: "standart" | "more";
 }
 
-function FeatureCard({card}: FeatureCardProps) {
+function FeatureCard({card, type}: FeatureCardProps) {
+  const featureCardClassName = classNames("feature-card", {
+    "feature-card--more": type === "more"
+  });
+
   return (
-    <div className={"feature-card"}>
-      {card.icon}
+    <div className={featureCardClassName}>
+      <img className={"feature-card__icon"} src={card.icon} alt={"feature icon"} />
 
       <div className={"feature-card__content"}>
         <h4 className={"feature-card__content__title typography--h4"}>{card.title}</h4>
@@ -26,13 +32,15 @@ function FeatureCard({card}: FeatureCardProps) {
           {card.description}
         </p>
 
-        <div className={"feature-card__content__link"}>
-          <a className={"feature-card__content__redirection"} href={card.to}>
-            {"Learn more..."}
-          </a>
+        {type === "standart" && (
+          <div className={"feature-card__content__link"}>
+            <a className={"feature-card__content__redirection"} href={card.to}>
+              {"Learn more..."}
+            </a>
 
-          <Chevron />
-        </div>
+            <Chevron />
+          </div>
+        )}
       </div>
     </div>
   );

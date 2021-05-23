@@ -6,6 +6,9 @@ import Intro from "./intro/Intro";
 import Features from "./features/Features";
 import Analytics from "./analytics/Analytics";
 import Price from "./price/Price";
+import Testimonial from "./testimonial/Testimonial";
+import MoreFeatures from "./features/more/MoreFeatures";
+import Collabrate from "./collabrate/Collabrate";
 
 function Body() {
   return (
@@ -13,6 +16,9 @@ function Body() {
       <Intro />
       <Features />
       <Analytics />
+      <MoreFeatures />
+      <Collabrate />
+      <Testimonial />
       <Price />
     </div>
   );

@@ -15,12 +15,18 @@
   border-radius: var(--large-border-radius) var(--large-border-radius) 0 0;
 
   &__icon {
-    @include for-small-devices {
-      width: 95px;
+    @include for-medium-devices {
+      width: 64px;
+      height: 64px;
     }
 
-    width: 160px;
-    height: 95px;
+    @include for-small-devices {
+      width: 40px;
+      height: 40px;
+    }
+
+    width: 92px;
+    height: 92px;
   }
 
   &__content {

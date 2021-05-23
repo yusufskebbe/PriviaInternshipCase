@@ -38,4 +38,28 @@
       color: var(--dark-blue);
     }
   }
+
+  &__icon {
+    @include for-medium-devices {
+      width: 64px;
+      height: 64px;
+    }
+
+    @include for-small-devices {
+      width: 40px;
+      height: 40px;
+    }
+
+    width: 92px;
+    height: 92px;
+  }
+}
+
+.feature-card--more {
+  @include for-medium-devices {
+    align-items: center;
+  }
+
+  flex-direction: column;
+  gap: 15px;
 }

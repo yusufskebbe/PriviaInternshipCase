@@ -1,0 +1,48 @@
+@import "../../../../../core/ui/style/reference/media-queries";
+
+.features-more {
+  @include for-small-devices {
+    border-radius: initial;
+  }
+  @include for-medium-devices {
+    padding-bottom: 80px;
+  }
+
+  padding-bottom: 243px;
+
+  background-color: white;
+
+  &__content {
+    @include for-medium-devices {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 20px;
+
+      text-align: center;
+    }
+
+    max-width: 890px;
+
+    margin: 0 auto;
+  }
+
+  &__list {
+    @include for-medium-devices {
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @include for-small-devices {
+      grid-template-columns: auto;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 72px;
+
+    margin-top: 69px;
+  }
+}

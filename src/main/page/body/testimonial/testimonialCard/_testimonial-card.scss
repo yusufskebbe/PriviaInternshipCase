@@ -1,0 +1,33 @@
+@import "../../../../../core/ui/style/reference/media-queries";
+
+.testimonial-card {
+  @include for-small-devices {
+    padding: 16px;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  max-width: 569px;
+
+  padding: 36px 48px;
+
+  border: 1px solid var(--light-gray);
+
+  border-radius: var(--default-border-radius);
+
+  &__user {
+    display: flex;
+    align-content: center;
+
+    gap: 12px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+}

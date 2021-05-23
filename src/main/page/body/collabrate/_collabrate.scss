@@ -1,0 +1,71 @@
+@import "../../../../core/ui/style/reference/media-queries";
+
+.collabrate {
+  @include for-small-devices {
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  padding-bottom: 203px;
+
+  background-color: white;
+
+  &__content {
+    @include for-medium-devices {
+      flex-direction: column-reverse;
+
+      text-align: center;
+    }
+
+    display: flex;
+    gap: 70px;
+
+    max-width: 890px;
+
+    margin: 0 auto;
+
+    &__info {
+      @include for-medium-devices {
+        align-items: center;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__img {
+      @include for-small-devices {
+        width: 281px;
+      }
+
+      width: 365px;
+
+      margin: 0 auto;
+
+      object-fit: contain;
+    }
+
+    &__list {
+      @include for-small-devices {
+        grid-template-columns: auto;
+      }
+
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 25px;
+
+      margin-top: 34px;
+    }
+
+    &__list-item {
+      @include for-medium-devices {
+        justify-content: center;
+      }
+
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
