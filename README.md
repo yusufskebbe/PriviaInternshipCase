@@ -1,5 +1,7 @@
 # Privia Internship Case
 
+## The live version of the project can be seen here in sync with production branch.
+https://privia-internship-case.netlify.app/
 
 ## This repository  was created for Privia Security Internship
 <br>
