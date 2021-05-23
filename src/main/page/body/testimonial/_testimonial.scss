@@ -1,7 +1,7 @@
 @import "../../../../core/ui/style/reference/media-queries";
 
 .testimonial {
-  @include for-small-devices {
+  @include for-medium-devices {
     padding: 0 20px;
   }
 

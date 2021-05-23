@@ -44,6 +44,10 @@
         display: none;
       }
 
+      @include for-medium-devices {
+        gap: 20px;
+      }
+
       display: flex;
       gap: 32px;
 

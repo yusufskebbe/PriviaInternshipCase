@@ -55,7 +55,7 @@ function PriceCard({
         <div className={"price-card__properties"}>
           {properties.map((property) => {
             return (
-              <div className={"price-card__property-item"}>
+              <div key={property} className={"price-card__property-item"}>
                 <TickIcon />
                 <p>{property}</p>
               </div>
