@@ -4,7 +4,8 @@
 ## This repository  was created for Privia Security Internship
 <br>
 
-
+Detailed description of the project can be seen in the description section of each PR.
+https://github.com/yusufskebbe/PriviaInternshipCase/pulls?q=is%3Apr+is%3Aclosed
 
 
 
