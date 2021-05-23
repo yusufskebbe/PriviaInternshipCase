@@ -36,7 +36,7 @@ function PriceCard({
         <div className={"price-card__header"}>
           <p className={"price-card__header__price typography--h3"}>{`$${
             // eslint-disable-next-line no-magic-numbers
-            isBillMonthly ? price : (price * 12 - (price * 12) / 15 / 100).toFixed(0)
+            isBillMonthly ? price : (price * 12 - (price * 12 * 15) / 100).toFixed(0)
           }`}</p>
           <p className={"price-card__header__plan typography--small"}>
             {isBillMonthly ? "/month" : "/annual"}

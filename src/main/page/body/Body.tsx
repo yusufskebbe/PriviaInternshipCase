@@ -13,7 +13,6 @@ function Body() {
       <Intro />
       <Features />
       <Analytics />
-
       <Price />
     </div>
   );
