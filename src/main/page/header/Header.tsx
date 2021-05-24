@@ -1,11 +1,15 @@
 import {ReactComponent as Logo} from "../../../core/ui/assets/images/logo.svg";
 import {ReactComponent as MenuIcon} from "../../../core/ui/assets/icons/menuIcon.svg";
+import {ReactComponent as CloseIcon} from "../../../core/ui/assets/icons/close.svg";
 
 import "./_header.scss";
 
-import React from "react";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 import Button from "../../../components/button/Button";
+import classNames from "classnames";
+//import HeaderMobile from "./HeaderMobile";
 
 type navLinkItem = {
   id: string;
@@ -16,52 +20,68 @@ type navLinkItem = {
 const navLinkItems: navLinkItem[] = [
   {
     id: "about",
-    content: "About"
+    content: "About",
+    to: "/about"
   },
   {
     id: "product",
-    content: "Product"
+    content: "Product",
+    to: "/product"
   },
   {
     id: "pricing",
-    content: "Pricing"
+    content: "Pricing",
+    to: "/pricing"
   },
   {
     id: "resources",
-    content: "Resources"
+    content: "Resources",
+    to: "/resources"
   },
   {
     id: "customers",
-    content: "Customers"
+    content: "Customers",
+    to: "customers"
   }
 ];
 
 function Header() {
-  return (
-    <header className={"header"}>
-      <Logo />
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // const [product, setProduct] = useState(0);
+  //const [pricing, setPricing] = useState(0);
+  // const [resources, setResources] = useState(0);
+  //const [customers, setCustomers] = useState(0);
+
+  return (
+    <header className={classNames("header", {"header--menu": isMenuOpen})}>
+      <Logo />
       <div className={"header__nav"}>
         <ul className={"header__nav__list"}>
           {navLinkItems.map((item) => {
             return (
-              <li key={item.id} className={"header__nav__list-item typography--small"}>
+              <Link key={item.id} className={"header__nav__list-item"} to={item.to}>
                 {item.content}
-              </li>
+              </Link>
             );
           })}
         </ul>
       </div>
-
       <div className={"header__auth"}>
         <p className={"typography--small"}>Login</p>
 
         <Button customClassName={"header__auth-start"}>{"Start free trial"}</Button>
       </div>
-
-      <MenuIcon className={"header__menu"} />
+      {isMenuOpen ? (
+        <CloseIcon onClick={handleMenuClick} className={"header__menu"} />
+      ) : (
+        <MenuIcon onClick={handleMenuClick} className={"header__menu"} />
+      )}
     </header>
   );
+  function handleMenuClick() {
+    setIsMenuOpen(!isMenuOpen);
+  }
 }
 
 export default Header;
