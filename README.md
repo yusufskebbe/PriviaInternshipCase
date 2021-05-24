@@ -12,7 +12,7 @@ https://github.com/yusufskebbe/PriviaInternshipCase/pulls?q=is%3Apr+is%3Aclosed
 
 ## Notes:
 - I learn a lot of things while I was doing this task, I had some problems while I was exporting the svg files, so I only put the parts that I reached in the exported files.
-- There is a tricky part in this project, you can click on the switch  button to get your %20 save, this feature valid for all the cards :) 
+- There is a tricky part in this project, you can click on the switch  button to get your %15 save, this feature valid for all the cards :) 
 ![GIF-210524_225344](https://user-images.githubusercontent.com/59177945/119408379-445b3b00-bcee-11eb-85af-3dcfdf32cee5.gif)
 ![GIF-210524_225431](https://user-images.githubusercontent.com/59177945/119408415-5341ed80-bcee-11eb-9766-96b66c2082d6.gif)
 
